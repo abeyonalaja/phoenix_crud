@@ -2,3 +2,14 @@
 /deps
 erl_crash.dump
 *.ez
+_build
+ebin
+.eunit
+*.o
+*.beam
+*.plt
+*.swp
+erl_crash.dump
+/tmp
+mix.lock
+log
