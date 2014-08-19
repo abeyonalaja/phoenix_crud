@@ -24,6 +24,8 @@ defmodule PhoenixCrud.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
+      {:postgrex, ">= 0.0.0"},
+      {:ecto,  "~> 0.2.0"},
       {:phoenix, github: "phoenixframework/phoenix"},
       {:cowboy, "~> 1.0.0"}
     ]
