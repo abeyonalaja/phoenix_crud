@@ -2,5 +2,10 @@ defmodule PhoenixCrud.Router do
   use Phoenix.Router
 
   plug Plug.Static, at: "/static", from: :phoenix_crud
-  get "/", PhoenixCrud.PageController, :index, as: :page
+
+  scope alias: PhoenixCrud do
+    get "/", WelcomeController, :show, as: :page
+    get "/pages/:page", PageController, :show, as: :page
+    resources "users", UserController
+  end
 end
