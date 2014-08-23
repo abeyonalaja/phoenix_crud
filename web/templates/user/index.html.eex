@@ -1,0 +1,17 @@
+<div class="col-md-12">
+  <h3>Users</h3>
+
+  <ul>
+    <%= for user <- @users do %>
+      <li>
+        <a href="<%= users_path(:show,2) %>">
+          <%= user.content %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+  <a href="<%= users_path(:new) %>" class="btn btn-primary">
+    New User
+  </a>
+</div>
