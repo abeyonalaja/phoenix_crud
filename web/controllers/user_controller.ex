@@ -50,7 +50,7 @@ defmodule PhoenixCrud.UserController do
       [] ->
         Repo.update(user)
         # [g] really hacky way to redirect in the client.. (is there a better way?)
-        json conn, 201, JSON.encode!(%{location: Router.user_path(id: user.id)})
+        json conn, 201, JSON.encode!(%{location: Router.users_path(:show, user.id)})
       errors ->
         json conn, errors: errors
     end

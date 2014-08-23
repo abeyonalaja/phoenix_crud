@@ -14,7 +14,7 @@
 <script>
   $("form").on("submit", function(event) {
     event.preventDefault();
-
+    console.log("whats going on!")
     $that = this;
 
     $.ajax({
@@ -22,6 +22,7 @@
       type: "PUT",
       data: $('form').serialize(),
       success: function(data) {
+        console.log("did it")
         window.location = data.location;
       }
     });
