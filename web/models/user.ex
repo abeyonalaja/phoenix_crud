@@ -6,4 +6,5 @@ defmodule PhoenixCrud.User do
 
   schema "users" do
     field :content, :string
+  end
 end
